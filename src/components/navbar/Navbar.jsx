@@ -1,116 +1,107 @@
 import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-
-
-
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import AdbIcon from '@mui/icons-material/Adb';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import CottageIcon from '@mui/icons-material/Cottage';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
+import MenuIcon from '@mui/icons-material/Menu';
+import StorageIcon from '@mui/icons-material/Storage';
 
-
-
-
-
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const links = [
+    {
+        site: 'GithHub',
+        url: 'https://github.com/EsotericZ'
+    },
+    {
+        site: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/cj-sanders1986'
+    },
+];
 
 export const Navbar = () => {
-
-
-
-
-
-
     const [state, setState] = useState({
         top: false,
         left: false,
         bottom: false,
         right: false,
-      });
-    
-      const toggleDrawer = (anchor, open) => (event) => {
+    });
+
+    const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-          return;
+            return;
         }
-    
         setState({ ...state, [anchor]: open });
-      };
-    
-      const list = (anchor) => (
+    };
+
+    const list = (anchor) => (
         <Box
-          sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-          role="presentation"
-          onClick={toggleDrawer(anchor, false)}
-          onKeyDown={toggleDrawer(anchor, false)}
+            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+            role="presentation"
+            onClick={toggleDrawer(anchor, false)}
+            onKeyDown={toggleDrawer(anchor, false)}
         >
-          <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
+            <List>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <AccountBoxIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={'CJ Sanders'} />
+                    </ListItemButton>
+                </ListItem>
+            </List>
+            <Divider />
+            <List>
+                {['Home', 'Projects', 'Contact'].map((text, index) => (
+                    <ListItem key={index} disablePadding>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                {text === 'Home' && <CottageIcon />}
+                                {text === 'Projects' && <StorageIcon />}
+                                {text === 'Contact' && <ConnectWithoutContactIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={text} />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+            <Divider />
+            <List>
+                {links.map((link, index) => (
+                    <ListItem key={index} disablePadding>
+                        <ListItemButton href={link.url} target='__blank'>
+                            <ListItemIcon>
+                                {index % 2 === 0 ? <GitHubIcon /> : <LinkedInIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={link.site} />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
         </Box>
-      );
+    );
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    const [anchorElUser, setAnchorElUser] = useState(null);
-
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
 
     return (
         <AppBar position="static">
@@ -137,48 +128,17 @@ export const Navbar = () => {
                     </Typography>
 
                     <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <MenuIcon />
-                            </IconButton>
-                        </Tooltip>
-                        <Menu
-                            sx={{ mt: '45px' }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
-
-
-    <div>
-      <Button onClick={toggleDrawer('right', true)}>{'right'}</Button>
-      <Drawer
-        anchor={'right'}
-        open={state['right']}
-        onClose={toggleDrawer('right', false)}
-      >
-        {list('right')}
-      </Drawer>
-    </div>
-
-
-
-                        </Menu>
+                        <IconButton onClick={toggleDrawer('right', true)} sx={{ p: 0 }}>
+                            <Drawer
+                                onClick={(e) => {e.stopPropagation()}}
+                                anchor={'right'}
+                                open={state['right']}
+                                onClose={toggleDrawer('right', false)}
+                            >
+                                {list('right')}
+                            </Drawer>
+                            <MenuIcon />
+                        </IconButton>
                     </Box>
                 </Toolbar>
             </Container>
