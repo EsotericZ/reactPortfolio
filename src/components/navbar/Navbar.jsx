@@ -18,9 +18,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import CottageIcon from '@mui/icons-material/Cottage';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import StorageIcon from '@mui/icons-material/Storage';
 
@@ -98,13 +96,12 @@ export const Navbar = () => {
         </Box>
     );
 
-
-
-
-
-
     return (
-        <AppBar position="static">
+        <AppBar 
+            position="static" 
+            color="transparent"
+            sx={{backdropFilter:"blur(20px)"}}
+        >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -126,7 +123,6 @@ export const Navbar = () => {
                     >
                         SANDERS
                     </Typography>
-
                     <Box sx={{ flexGrow: 0 }}>
                         <IconButton onClick={toggleDrawer('right', true)} sx={{ p: 0 }}>
                             <Drawer
