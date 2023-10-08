@@ -22,6 +22,9 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MenuIcon from '@mui/icons-material/Menu';
 import StorageIcon from '@mui/icons-material/Storage';
 
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+
 const links = [
     {
         site: 'GithHub',
@@ -33,7 +36,13 @@ const links = [
     },
 ];
 
-export const Navbar = () => {
+export const Navbar = ({parentMode}) => {
+    const [theme, setTheme] = useState('dark')
+    const changeTheme = () => {
+        setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
+        parentMode(theme)
+    }
+
     const [state, setState] = useState({
         top: false,
         left: false,
@@ -123,6 +132,24 @@ export const Navbar = () => {
                     >
                         SANDERS
                     </Typography>
+
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            // width: '100%',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            bgcolor: 'background.default',
+                            color: 'text.primary',
+                            borderRadius: 1,
+                            p: 3,
+                        }}
+                    >
+                        <IconButton sx={{ ml: 1 }} onClick={changeTheme} color="inherit">
+                            {theme === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                        </IconButton>
+                    </Box>
+
                     <Box sx={{ flexGrow: 0 }}>
                         <IconButton sx={{ p: 0 }}>
                             <Drawer
