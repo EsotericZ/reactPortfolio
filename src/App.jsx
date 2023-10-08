@@ -9,6 +9,7 @@ import './App.css';
 
 import { Navbar } from './components/navbar/Navbar';
 import { Profile } from './components/profile/Profile';
+import { orange } from '@mui/material/colors';
 
 const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
@@ -59,6 +60,12 @@ export const App = () => {
             createTheme({
                 palette: {
                     mode,
+                    primary: {
+                        main: orange[500]
+                    },
+                    background: {
+                        default: mode === 'dark' ? '#232323' : 'fafafa'
+                    }
                 },
             }),
         [mode],

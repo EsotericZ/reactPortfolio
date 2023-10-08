@@ -124,7 +124,7 @@ export const Navbar = () => {
                         SANDERS
                     </Typography>
                     <Box sx={{ flexGrow: 0 }}>
-                        <IconButton onClick={toggleDrawer('right', true)} sx={{ p: 0 }}>
+                        <IconButton sx={{ p: 0 }}>
                             <Drawer
                                 onClick={(e) => {e.stopPropagation()}}
                                 anchor={'right'}
@@ -133,7 +133,7 @@ export const Navbar = () => {
                             >
                                 {list('right')}
                             </Drawer>
-                            <MenuIcon />
+                            <MenuIcon onClick={toggleDrawer('right', true)} />
                         </IconButton>
                     </Box>
                 </Toolbar>
