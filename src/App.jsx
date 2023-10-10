@@ -1,7 +1,6 @@
 import { createContext, useState, useMemo } from 'react';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
-import { createTheme, CssBaseline, ThemeProvider, useTheme } from '@mui/material';
-import './App.css';
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 
 import { Navbar } from './components/navbar/Navbar';
 import { Profile } from './components/profile/Profile';
