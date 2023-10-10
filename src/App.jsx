@@ -49,7 +49,7 @@ export const App = () => {
         <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
-                <Navbar position="fixed" parentMode={parentMode}/>
+                <Navbar style={{ position: "fixed" }} parentMode={parentMode}/>
                 <RouterProvider router={router} />
             </ThemeProvider>
         </ColorModeContext.Provider>

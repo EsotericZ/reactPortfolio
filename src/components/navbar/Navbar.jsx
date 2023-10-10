@@ -107,9 +107,8 @@ export const Navbar = ({parentMode}) => {
 
     return (
         <AppBar 
-            position="static" 
             color="transparent"
-            sx={{backdropFilter:"blur(20px)"}}
+            sx={{ backdropFilter: "blur(20px)" }}
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>

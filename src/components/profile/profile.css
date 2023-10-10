@@ -1,0 +1,17 @@
+#profileImg {
+    position: relative;
+    height: 82vh;
+    margin-bottom: 25px;
+}
+
+#profileIntro {
+    border: solid 1px white;
+}
+
+img {
+    display:block;
+    width: 80%;
+    max-width: 100%;
+    border-radius: 30px;
+    padding: 10px;
+}
