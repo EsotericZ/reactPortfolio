@@ -15,6 +15,9 @@ import Typography from '@mui/material/Typography';
 
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import AdbIcon from '@mui/icons-material/Adb';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import CodeIcon from '@mui/icons-material/Code';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import CottageIcon from '@mui/icons-material/Cottage';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -22,8 +25,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MenuIcon from '@mui/icons-material/Menu';
 import StorageIcon from '@mui/icons-material/Storage';
 
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 const links = [
     {
@@ -113,7 +114,7 @@ export const Navbar = ({parentMode}) => {
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap
