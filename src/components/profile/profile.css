@@ -8,6 +8,16 @@
     border: solid 1px white;
 }
 
+.test1 {
+    border: solid 1px white;
+}
+
+.techImg {
+    border: solid 1px white;
+    width: 150px;
+    height: 150px;
+}
+
 img {
     display:block;
     width: 80%;
