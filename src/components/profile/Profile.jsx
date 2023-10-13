@@ -69,10 +69,10 @@ export const Profile = () => {
 
             <Divider variant="middle" />
             
-            <Typography variant="h3" gutterBottom textAlign="center" className="test1">
-                Full Stack MERN Technologies
+            <Typography variant="h3" gutterBottom textAlign="center">
+                Technologies
             </Typography>
-            <Grid container className='test1' justifyContent="center">
+            <Grid container justifyContent="center">
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                     <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
                         <img src={reactImg} alt="reactImg" ref={boxRef} />
@@ -98,60 +98,57 @@ export const Profile = () => {
                     </Box>
                 </Grid>
             </Grid>
-            <Typography variant="h3" gutterBottom textAlign="center">
-                Other Technologies
-            </Typography>
             <Grid container spacing={2} justifyContent="center">
-                <Grid item xs={6} md={2}>
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={javascriptImg} alt="javascriptImg" />
-                        JavaScript
-                    </Box>
-                </Grid>
-                <Grid item xs={6} md={2} justifyContent="center">
+                <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                     <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
                         <img src={graphqlImg} alt="graphqlImg" />
                         GraphQL
                     </Box>
                 </Grid>
-                <Grid item xs={6} md={2} justifyContent="center">
+                <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                     <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={mysqlImg} alt="mysqlImg" />
+                        <img src={mysqlImg} alt="mysqlImg" className="mysqlPic" />
                         MySQL
                     </Box>
                 </Grid>
-                <Grid item xs={6} md={2} justifyContent="center">
+                <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                     <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={pythonImg} alt="pythonImg" />
+                        <img src={pythonImg} alt="pythonImg" className="pythonPic" />
                         Python
                     </Box>
                 </Grid>
             </Grid>
             <Grid container spacing={2} justifyContent="center">
-                <Grid item xs={6} md={2}>
+                <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
+                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
+                        <img src={javascriptImg} alt="javascriptImg" />
+                        JavaScript
+                    </Box>
+                </Grid>
+                <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                     <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
                         <img src={htmlImg} alt="htmlImg" />
                         HTML
                     </Box>
                 </Grid>
-                <Grid item xs={6} md={2} justifyContent="center">
+                <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                     <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={cssImg} alt="cssImg" />
+                        <img src={cssImg} alt="cssImg" className="cssPic" />
                         CSS
                     </Box>
                 </Grid>
-                <Grid item xs={6} md={2} justifyContent="center">
+                <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                     <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
                         <img src={gitImg} alt="gitImg" />
                         Git
                     </Box>
                 </Grid>
-                <Grid item xs={6} md={2} justifyContent="center">
+                {/* <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                     <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={bootstrapImg} alt="bootstrapImg" />
+                        <img src={bootstrapImg} alt="bootstrapImg" className="bsPic" />
                         Bootstrap
                     </Box>
-                </Grid>
+                </Grid> */}
             </Grid>
       </Box>
     )

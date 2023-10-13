@@ -4,16 +4,11 @@
     margin-bottom: 25px;
 }
 
-#profileIntro {
+/* #profileIntro {
     border: solid 1px white;
-}
-
-.test1 {
-    border: solid 1px white;
-}
+} */
 
 .techImg {
-    border: solid 1px white;
     width: 150px;
     height: 150px;
 }
@@ -24,4 +19,33 @@ img {
     max-width: 100%;
     border-radius: 30px;
     padding: 10px;
+}
+
+.cssPic {
+    height: 120px;
+    border-radius: 0px;
+    width: 60%;
+}
+
+.pythonPic {
+    height: 120px;
+    border-radius: 0px;
+}
+
+.mysqlPic {
+    border-radius: 0px;
+    padding: 20px 0;
+}
+
+/* .bsPic {
+    border-radius: 0px;
+    padding: 5px 0;
+} */
+
+
+
+
+
+.test {
+    border: solid 1px white;
 }
