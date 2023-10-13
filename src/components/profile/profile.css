@@ -8,9 +8,16 @@
     border: solid 1px white;
 } */
 
-.techImg {
+.techImgBox {
     width: 150px;
     height: 150px;
+}
+
+.techImg:hover {
+    background: radial-gradient(circle at center, rgba(160,32,240, 0.2), rgba(160, 32, 240) 100%);
+    border: 0px transparent;
+    border-radius: transparent;
+    box-shadow: 0 0 15px 10px rgba(160, 32, 240);
 }
 
 img {
@@ -23,24 +30,16 @@ img {
 
 .cssPic {
     height: 120px;
-    border-radius: 0px;
-    width: 60%;
+    padding: 10px 25px;
 }
 
 .pythonPic {
     height: 120px;
-    border-radius: 0px;
 }
 
 .mysqlPic {
-    border-radius: 0px;
-    padding: 20px 0;
+    padding: 30px 10px;
 }
-
-/* .bsPic {
-    border-radius: 0px;
-    padding: 5px 0;
-} */
 
 
 

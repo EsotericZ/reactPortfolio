@@ -73,82 +73,76 @@ export const Profile = () => {
                 Technologies
             </Typography>
             <Grid container justifyContent="center">
-                <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={reactImg} alt="reactImg" ref={boxRef} />
+                <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center" mb={4}>
+                    <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                        <img src={reactImg} alt="reactImg" ref={boxRef} className="techImg" />
                         React.js
                     </Box>
                 </Grid>
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={nodeImg} alt="nodeImg" />
+                    <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                        <img src={nodeImg} alt="nodeImg" className="techImg" />
                         Node.js
                     </Box>
                 </Grid>
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={muiImg} alt="muiImg" />
+                    <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                        <img src={muiImg} alt="muiImg" className="techImg" />
                         MaterialUI
                     </Box>
                 </Grid>
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={mongoImg} alt="mongoImg" />
+                    <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                        <img src={mongoImg} alt="mongoImg" className="techImg" />
                         MongoDB
                     </Box>
                 </Grid>
             </Grid>
-            <Grid container spacing={2} justifyContent="center">
+            <Grid container spacing={2} justifyContent="center" mb={4}>
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={graphqlImg} alt="graphqlImg" />
+                    <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                        <img src={graphqlImg} alt="graphqlImg" className="techImg" />
                         GraphQL
                     </Box>
                 </Grid>
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={mysqlImg} alt="mysqlImg" className="mysqlPic" />
+                    <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                        <img src={mysqlImg} alt="mysqlImg" className="mysqlPic techImg" />
                         MySQL
                     </Box>
                 </Grid>
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={pythonImg} alt="pythonImg" className="pythonPic" />
+                    <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                        <img src={pythonImg} alt="pythonImg" className="pythonPic techImg" />
                         Python
                     </Box>
                 </Grid>
             </Grid>
-            <Grid container spacing={2} justifyContent="center">
+            <Grid container spacing={2} justifyContent="center" mb={4}>
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={javascriptImg} alt="javascriptImg" />
+                    <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                        <img src={javascriptImg} alt="javascriptImg" className="techImg" />
                         JavaScript
                     </Box>
                 </Grid>
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={htmlImg} alt="htmlImg" />
+                    <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                        <img src={htmlImg} alt="htmlImg" className="techImg" />
                         HTML
                     </Box>
                 </Grid>
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={cssImg} alt="cssImg" className="cssPic" />
+                    <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                        <img src={cssImg} alt="cssImg" className="cssPic techImg" />
                         CSS
                     </Box>
                 </Grid>
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={gitImg} alt="gitImg" />
+                    <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                        <img src={gitImg} alt="gitImg" className="techImg" />
                         Git
                     </Box>
                 </Grid>
-                {/* <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                    <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={bootstrapImg} alt="bootstrapImg" className="bsPic" />
-                        Bootstrap
-                    </Box>
-                </Grid> */}
             </Grid>
       </Box>
     )
