@@ -1,3 +1,5 @@
+import { useLayoutEffect, useRef } from 'react';
+
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
@@ -17,9 +19,23 @@ import profile from "../../assets/profile.jfif";
 import pythonImg from '../../assets/python.png';
 import reactImg from '../../assets/react.png';
 
+import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.from('.box', {rotation: 0}, {rotation: 180, duration: 3})
+
 import "./profile.css";
 
 export const Profile = () => {
+    const boxRef = useRef();
+    useLayoutEffect(() => {
+        gsap.to(boxRef.current, {
+            rotation: "+=360", duration: 3
+        })
+    })
+
     return (
         <Box p={2} mt={20} sx={{ flexGrow: 1 }}>
             <Grid container spacing={2} justifyContent="center">
@@ -59,7 +75,7 @@ export const Profile = () => {
             <Grid container className='test1' justifyContent="center">
                 <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                     <Box className="techImg" display="grid" justifyItems="center" alignItems="center">
-                        <img src={reactImg} alt="reactImg" />
+                        <img src={reactImg} alt="reactImg" ref={boxRef} />
                         React.js
                     </Box>
                 </Grid>
