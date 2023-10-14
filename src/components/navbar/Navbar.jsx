@@ -14,6 +14,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import AppsIcon from '@mui/icons-material/Apps';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import CodeIcon from '@mui/icons-material/Code';
@@ -24,6 +25,24 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MenuIcon from '@mui/icons-material/Menu';
 import StorageIcon from '@mui/icons-material/Storage';
 
+const navigation = [
+    {
+        area: 'Home',
+        link: '#home'
+    },
+    {
+        area: 'Technologies',
+        link: '#technologies'
+    },
+    {
+        area: 'Projects',
+        link: '#projects'
+    },
+    {
+        area: 'Contact',
+        link: '#contact'
+    },
+]
 
 const links = [
     {
@@ -76,15 +95,16 @@ export const Navbar = ({parentMode}) => {
             </List>
             <Divider />
             <List>
-                {['Home', 'Projects', 'Contact'].map((text, index) => (
+                {navigation.map((nav, index) => (
                     <ListItem key={index} disablePadding>
-                        <ListItemButton>
+                        <ListItemButton href={nav.link}>
                             <ListItemIcon>
-                                {text === 'Home' && <CottageIcon />}
-                                {text === 'Projects' && <StorageIcon />}
-                                {text === 'Contact' && <ConnectWithoutContactIcon />}
+                                {nav.area === 'Home' && <CottageIcon />}
+                                {nav.area === 'Technologies' && <AppsIcon />}
+                                {nav.area === 'Projects' && <StorageIcon />}
+                                {nav.area === 'Contact' && <ConnectWithoutContactIcon />}
                             </ListItemIcon>
-                            <ListItemText primary={text} />
+                            <ListItemText primary={nav.area} />
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -135,10 +155,9 @@ export const Navbar = ({parentMode}) => {
                     <Box
                         sx={{
                             display: 'flex',
-                            // width: '100%',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            bgcolor: 'background.default',
+                            bgcolor: 'transparent',
                             color: 'text.primary',
                             borderRadius: 1,
                             p: 3,

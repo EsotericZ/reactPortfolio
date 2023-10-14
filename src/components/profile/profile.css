@@ -8,81 +8,10 @@ html {
     background: transparent;
 }
 
-.introName {
-    text-decoration: none;
-    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-    -webkit-mask-size: 200%;
-    animation: shine 3s linear infinite;
-}
-
-#profileImg {
-    position: relative;
-    height: 70vh;
-    margin-bottom: 25px;
-}
-
-.introDivider {
-    width: 75%;
-}
-
-.introAboutMe {
-    padding-top: 25px;
-}
-
-img {
-    display:block;
-    width: 80%;
-    max-width: 100%;
-    border-radius: 30px;
-    padding: 10px;
-}
-
-.profilePic {
-    padding: 0px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 25px 0px rgba(160, 32, 240);
-}
-
-
-
-
 .test {
     border: solid 1px white;
 }
 
 .moreStuff {
     height: 1000px;
-}
-
-
-
-
-
-
-@keyframes shine {
-    from { -webkit-mask-position: 150%; }
-    to { -webkit-mask-position: -50%; }
-}
-
-.arrow {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.bounce {
-    -moz-animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite;
-}
-  
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
 }

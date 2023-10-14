@@ -1,11 +1,11 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
-import "./horizontalScroll.css";
+import "./projects.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const HorizontalScroll = () => {
+export const Projects = () => {
     const component = useRef();
     const slider = useRef();
 
@@ -28,7 +28,7 @@ export const HorizontalScroll = () => {
     });
 
     return (
-        <div ref={component}>
+        <div ref={component} id="projects">
             <div ref={slider} className="container">
                 <div className="panel yellow">PROJECTS</div>
                 <div className="panel red">ONE</div>

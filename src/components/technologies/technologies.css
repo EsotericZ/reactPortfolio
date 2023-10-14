@@ -1,9 +1,17 @@
+#technologies {
+    height: 100%;
+    padding-top: 125px;
+}
+
+.techSpace {
+    margin-bottom: 75px;
+}
+
 img {
     display:block;
     width: 80%;
     max-width: 100%;
     border-radius: 30px;
-    padding: 10px;
 }
 
 .techImgBox {

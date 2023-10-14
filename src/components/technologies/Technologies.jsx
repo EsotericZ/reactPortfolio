@@ -33,8 +33,8 @@ const FadeInTech1 = forwardRef(({ children, stagger = 0, x = 0 }, ref) => {
                 {opacity: 1, stagger, x, scrollTrigger: {
                     scrub: 1,
                     trigger: elTech1.current.children,
-                    start: "top 80%",
-                    end: "top 60%"
+                    start: "top 90%",
+                    end: "top 80%"
                 }}
             );
         });
@@ -63,8 +63,8 @@ const FadeInTech2 = forwardRef(({ children, stagger = 0, x = 0 }, ref) => {
                 {opacity: 1, stagger, x, scrollTrigger: {
                     scrub: 1,
                     trigger: elTech2.current.children,
-                    start: "top 80%",
-                    end: "top 60%",
+                    start: "top 90%",
+                    end: "top 80%",
                 }}
             );
         });
@@ -93,8 +93,8 @@ const FadeInTech3 = forwardRef(({ children, stagger = 0, x = 0 }, ref) => {
                 {opacity: 1, stagger, x, scrollTrigger: {
                     scrub: 1,
                     trigger: elTech3.current.children,
-                    start: "top 80%",
-                    end: "top 60%",
+                    start: "top 90%",
+                    end: "top 80%",
                 }}
             );
         });
@@ -127,13 +127,13 @@ export const Technologies = () => {
     })
 
     return (
-        <Box>
-            <Typography variant="h3" gutterBottom textAlign="center">
+        <Box id="technologies">
+            <Typography variant="h3" mb={5} textAlign="center">
                 Technologies
             </Typography>
             <FadeInTech1 stagger={0.1} x={0} ref={animationTech1}>
-                <Grid container justifyContent="center">
-                    <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center" mb={4}>
+                <Grid container justifyContent="center" className="techSpace">
+                    <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                         <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
                             <img src={reactImg} alt="reactImg" ref={boxRef} className="techImg" />
                             React.js
@@ -159,8 +159,8 @@ export const Technologies = () => {
                     </Grid>
                 </Grid>
             </FadeInTech1>
-            <FadeInTech2 stagger={5} x={0} ref={animationTech2}>
-                <Grid container spacing={2} justifyContent="center" mb={4}>
+            <FadeInTech2 stagger={0.1} x={0} ref={animationTech2}>
+                <Grid container justifyContent="center" className="techSpace">
                     <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                         <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
                             <img src={graphqlImg} alt="graphqlImg" className="techImg" />
@@ -182,7 +182,7 @@ export const Technologies = () => {
                 </Grid>
             </FadeInTech2>
             <FadeInTech3 stagger={0.1} x={0} ref={animationTech3}>
-                <Grid container spacing={2} justifyContent="center" mb={4}>
+                <Grid container justifyContent="center" className="techSpace">
                     <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                         <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
                             <img src={javascriptImg} alt="javascriptImg" className="techImg" />
