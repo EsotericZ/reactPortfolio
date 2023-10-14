@@ -1,5 +1,11 @@
-body {
+html {
+    overflow: scroll;
+    overflow-y: scroll;
     overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
 }
 
 .introName {
@@ -64,8 +70,25 @@ img {
 
 
 
+.module {
+    height: 100vh;
+}
 
-
+.yellow {
+    background-color: yellow;
+}
+.orange {
+    background-color: orange;
+}
+.green {
+    background-color: green;
+}
+.green {
+    background-color: green;
+}
+.green {
+    background-color: green;
+}
 
 
 .test {

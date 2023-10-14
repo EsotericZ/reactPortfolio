@@ -4,6 +4,7 @@ import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 
 import { Navbar } from './components/navbar/Navbar';
 import { Profile } from './components/profile/Profile';
+// import { Test } from './components/test/Test';
 import { orange } from '@mui/material/colors';
 
 const ColorModeContext = createContext({ toggleColorMode: () => {} });
@@ -17,6 +18,7 @@ export const App = () => {
     const router = createBrowserRouter(
         createRoutesFromElements(
             <Route path="/" element={<Profile />} />
+            // <Route path="/" element={<Test />} />
         )
     )
 

@@ -2,6 +2,8 @@ import { useLayoutEffect, useEffect, useRef, forwardRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import { HorizontalScroll } from '../HorizontalScroll/HorizontalScroll';
+
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
@@ -121,15 +123,6 @@ export const Profile = () => {
     const animationTech1 = useRef();
     const animationTech2 = useRef();
     const animationTech3 = useRef();
-    const toggle = () => {
-        animationTech1.current.reversed(!animationTech1.current.reversed());
-    };
-    const toggle2 = () => {
-        animationTech2.current.reversed(!animationTech2.current.reversed());
-    };
-    const toggle3 = () => {
-        animationTech3.current.reversed(!animationTech3.current.reversed());
-    };
 
     const boxRef = useRef();
     useLayoutEffect(() => {
@@ -139,7 +132,7 @@ export const Profile = () => {
     })
 
     return (
-        <Box p={2} mt={15} sx={{ flexGrow: 1 }}>
+        <Box p={2} mt={15} sx={{ flexGrow: 1, padding: "0px" }}>
             <Grid container spacing={2} justifyContent="center">
                 <Grid item xs={12} md={6} lg={5}>
                     <Box>
@@ -165,17 +158,6 @@ export const Profile = () => {
             <div className="arrow bounce">
                 <KeyboardDoubleArrowDownIcon sx={{ fontSize: 50 }} />
             </div>
-
-            <Divider variant="middle" />
-            
-            <Grid container spacing={2} justifyContent="center">
-                <Grid item xs={4}>
-                    <Box>xs=4</Box>
-                </Grid>
-                <Grid item xs={8}>
-                    <Box>xs=8</Box>
-                </Grid>
-            </Grid>
 
             <Divider variant="middle" />
             
@@ -260,7 +242,24 @@ export const Profile = () => {
                     </Grid>
                 </Grid>
             </FadeInTech3>
-            <div className="moreStuff">c</div>
+
+            <Divider variant="middle" />
+
+
+            <HorizontalScroll />
+
+
+            <Divider variant="middle" />
+
+
+            <Grid container spacing={2} justifyContent="center">
+                <Grid item xs={4}>
+                    <Box>xs=4</Box>
+                </Grid>
+                <Grid item xs={8}>
+                    <Box>xs=8</Box>
+                </Grid>
+            </Grid>
       </Box>
     )
 }
