@@ -35,7 +35,7 @@ export const Projects = () => {
                 <div className="panel orange">TWO</div>
                 <div className="panel purple">THREE</div>
             </div>
-            <div className="lastContainer">Last Container</div>
+            {/* <div className="lastContainer">Last Container</div> */}
         </div>
     );
 }
