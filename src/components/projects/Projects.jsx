@@ -1,7 +1,8 @@
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef } from "react";
 
+import mmSite from '../../assets/mmSite.png';
 import profile from "../../assets/profile.jfif";
 import "./projects.css";
 
@@ -15,9 +16,17 @@ import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WebIcon from '@mui/icons-material/Web';
 
+import bootstrapImg from '../../assets/bootstrap.png';
+import cssImg from '../../assets/css.png';
+import gitImg from '../../assets/git.png';
+import graphqlImg from '../../assets/graphql.png';
+import htmlImg from '../../assets/html.png';
+import javascriptImg from '../../assets/javascript.png';
 import mongoImg from '../../assets/mongo.png';
 import muiImg from '../../assets/mui.png';
+import mysqlImg from '../../assets/mysql.png';
 import nodeImg from '../../assets/node.png';
+import pythonImg from '../../assets/python.png';
 import reactImg from '../../assets/react.png';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -44,11 +53,62 @@ export const Projects = () => {
         return () => ctx.revert();
     });
 
+    const boxRef = useRef();
+    useLayoutEffect(() => {
+        gsap.fromTo(boxRef.current, 
+            {rotation: 0},
+            {rotation: "+=3600", duration: 30, scrollTrigger: {trigger: boxRef.current}})
+    })
+
+
     return (
         <div ref={component} id="projects">
             <div ref={slider} className="container">
                 <div className="panel">PROJECTS</div>
                 <div className="panel red">
+                    <Box className="projectBox">
+                        <Grid container justifyContent="center">
+                            <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
+                                <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                                    <img src={reactImg} alt="reactImg" ref={boxRef} className="techImg" />
+                                </Box>
+                            </Grid>
+                            <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
+                                <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                                    <img src={bootstrapImg} alt="bootstrapImg" className="techImg" />
+                                </Box>
+                            </Grid>
+                            <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
+                                <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                                    <img src={cssImg} alt="cssImg" className="cssPic techImg" />
+                                </Box>
+                            </Grid>
+                        </Grid>
+                        <div className="projectContainer">
+                            <Box className="projectBoxLeft">
+                                <Stack direction="column" spacing={2}>
+                                    <Typography variant='h3'>
+                                        Monarch Metal Manufacturing
+                                    </Typography>
+                                    <Divider className="projectDivider" />
+                                    <Typography variant='h5'>
+                                        Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing
+                                    </Typography>
+                                    <Stack direction="row" spacing={5} display="flex" justifyContent="center">
+                                        <Button className='projectBtn' variant="contained" startIcon={<WebIcon />} href='https://externalsite-production.up.railway.app' target='_blank'>
+                                            LIVE SITE
+                                        </Button>
+                                        <Button className='projectBtn' variant="contained" endIcon={<GitHubIcon />} href="https://github.com/Monarch-Metal/externalSite" target='_blank'>
+                                            CODE
+                                        </Button>
+                                    </Stack>
+                                </Stack>
+                            </Box>
+                            <img src={mmSite} alt="monarchPic" className="monarchPic" />
+                        </div>
+                    </Box>
+                </div>
+                <div className="panel orange">
                     <Box className="projectBox">
                         <Grid container justifyContent="center">
                             <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
@@ -83,23 +143,21 @@ export const Projects = () => {
                                         Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing
                                     </Typography>
                                     <Stack direction="row" spacing={5} display="flex" justifyContent="center">
-                                        <Button variant="contained" startIcon={<WebIcon />}>
-                                            Live SITE
+                                        <Button className='projectBtn' variant="contained" startIcon={<WebIcon />} href='https://externalsite-production.up.railway.app' target='_blank'>
+                                            LIVE SITE
                                         </Button>
-                                        <Button variant="contained" endIcon={<GitHubIcon />}>
+                                        <Button className='projectBtn' variant="contained" endIcon={<GitHubIcon />} href="https://github.com/Monarch-Metal/externalSite" target='_blank'>
                                             CODE
                                         </Button>
                                     </Stack>
                                 </Stack>
                             </Box>
-                            <img src={profile} alt="monarchPic" className="monarchPic" />
+                            <img src={mmSite} alt="monarchPic" className="monarchPic" />
                         </div>
                     </Box>
                 </div>
-                <div className="panel orange">TWO</div>
                 <div className="panel purple">THREE</div>
             </div>
-            {/* <div className="lastContainer">Last Container</div> */}
         </div>
     );
 }
