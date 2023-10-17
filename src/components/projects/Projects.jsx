@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
+import { Fireworks } from "@fireworks-js/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -55,32 +56,55 @@ export const Projects = () => {
 
     const boxRef = useRef();
     useLayoutEffect(() => {
+        gsap.to(".bounceImg", {x: (i) => 15 * i, repeat: -1, yoyo: true, duration: 1})
+        gsap.to(".rtr", {x: (i) => -15 * i, repeat: -1, yoyo: true, duration: 1})
+    })
+    
+    useLayoutEffect(() => {
         gsap.fromTo(boxRef.current, 
             {rotation: 0},
             {rotation: "+=3600", duration: 30, scrollTrigger: {trigger: boxRef.current}})
     })
 
-
     return (
         <div ref={component} id="projects">
             <div ref={slider} className="container">
-                <div className="panel">PROJECTS</div>
+                <div className="panel">
+                    PROJECTS
+                    <Fireworks
+                        options={{
+                            rocketsPoint: {
+                                min: 0,
+                                max: 100
+                            }
+                        }}
+                        style={{
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            position: "fixed",
+                            background: "linear-gradient(#e66465, #9198e5);"
+                        }}
+                    />
+                </div>
                 <div className="panel red">
                     <Box className="projectBox">
                         <Grid container justifyContent="center">
+                            <div className='rtr'></div>
                             <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                                 <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
-                                    <img src={reactImg} alt="reactImg" ref={boxRef} className="techImg" />
+                                    <img src={bootstrapImg} alt="bootstrapImg" className="techImg rtr" />
                                 </Box>
                             </Grid>
                             <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                                 <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
-                                    <img src={bootstrapImg} alt="bootstrapImg" className="techImg" />
+                                    <img src={reactImg} alt="reactImg" ref={boxRef} className="techImg bounceImg" />
                                 </Box>
                             </Grid>
                             <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                                 <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
-                                    <img src={cssImg} alt="cssImg" className="cssPic techImg" />
+                                    <img src={cssImg} alt="cssImg" className="cssPic techImg bounceImg" />
                                 </Box>
                             </Grid>
                         </Grid>

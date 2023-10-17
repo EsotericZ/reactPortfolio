@@ -119,13 +119,6 @@ export const Technologies = () => {
     const animationTech2 = useRef();
     const animationTech3 = useRef();
 
-    // const boxRef = useRef();
-    // useLayoutEffect(() => {
-    //     gsap.fromTo(boxRef.current, 
-    //         {rotation: 0},
-    //         {rotation: "+=360", duration: 3, scrollTrigger: {trigger: boxRef.current}})
-    // })
-
     return (
         <Box id="technologies">
             <Typography variant="h3" mb={5} textAlign="center">
@@ -135,7 +128,6 @@ export const Technologies = () => {
                 <Grid container justifyContent="center" className="techSpace">
                     <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                         <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
-                            {/* <img src={reactImg} alt="reactImg" ref={boxRef} className="techImg" /> */}
                             <img src={reactImg} alt="reactImg" className="techImg" />
                             React.js
                         </Box>
