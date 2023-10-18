@@ -2,9 +2,9 @@ import { useLayoutEffect, useRef } from "react";
 import { Fireworks } from "@fireworks-js/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import ParticleEffectButton from 'react-particle-effect-button';
 
 import mmSite from '../../assets/mmSite.png';
-import profile from "../../assets/profile.jfif";
 import "./projects.css";
 
 import Box from '@mui/material/Box';
