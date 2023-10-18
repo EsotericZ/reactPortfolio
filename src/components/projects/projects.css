@@ -72,6 +72,7 @@ body {
 }
 
 .projectBoxLeft {
+    background-color: grey;
     height: 75%;
     width: 75%;
     border-radius: 25px;
@@ -81,11 +82,33 @@ body {
     z-index: 10;
 }
 
+.projectBoxRight {
+    background-color: grey;
+    height: 75%;
+    width: 75%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+}
+
 .monarchPic {
     position: absolute;
     height: 100%;
     width: auto;
     right: 0;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.corballPic {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left: 0;
     z-index: 0;
     opacity: 0.8;
 }

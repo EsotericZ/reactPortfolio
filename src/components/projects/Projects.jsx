@@ -132,7 +132,59 @@ export const Projects = () => {
                         </div>
                     </Box>
                 </div>
+
+
+
+
                 <div className="panel orange">
+                    <Box className="projectBox">
+                        <Grid container justifyContent="center">
+                            <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
+                                <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                                    <img src={reactImg} alt="reactImg" className="techImg" />
+                                </Box>
+                            </Grid>
+                            <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
+                                <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                                    <img src={nodeImg} alt="nodeImg" className="techImg" />
+                                </Box>
+                            </Grid>
+                            <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
+                                <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                                    <img src={muiImg} alt="muiImg" className="techImg" />
+                                </Box>
+                            </Grid>
+                            <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
+                                <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
+                                    <img src={mongoImg} alt="mongoImg" className="techImg" />
+                                </Box>
+                            </Grid>
+                        </Grid>
+                        <div className="projectContainer">
+                            <Box className="projectBoxRight">
+                                <Stack direction="column" spacing={2}>
+                                    <Typography variant='h3'>
+                                        CO RBall Ranks
+                                    </Typography>
+                                    <Divider className="projectDivider" />
+                                    <Typography variant='h5'>
+                                        Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing
+                                    </Typography>
+                                    <Stack direction="row" spacing={5} display="flex" justifyContent="center">
+                                        <Button className='projectBtn' variant="contained" startIcon={<WebIcon />} href='https://externalsite-production.up.railway.app' target='_blank'>
+                                            LIVE SITE
+                                        </Button>
+                                        <Button className='projectBtn' variant="contained" endIcon={<GitHubIcon />} href="https://github.com/Monarch-Metal/externalSite" target='_blank'>
+                                            CODE
+                                        </Button>
+                                    </Stack>
+                                </Stack>
+                            </Box>
+                            <img src={mmSite} alt="corballPic" className="corballPic" />
+                        </div>
+                    </Box>
+                </div>
+                <div className="panel purple">
                     <Box className="projectBox">
                         <Grid container justifyContent="center">
                             <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
@@ -180,7 +232,6 @@ export const Projects = () => {
                         </div>
                     </Box>
                 </div>
-                <div className="panel purple">THREE</div>
             </div>
         </div>
     );
