@@ -5,6 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import ParticleEffectButton from 'react-particle-effect-button';
 
 import mmSite from '../../assets/mmSite.png';
+import coRBRank from '../../assets/coRBRank.png';
 import "./projects.css";
 
 import Box from '@mui/material/Box';
@@ -53,15 +54,26 @@ export const Projects = () => {
         }, component);
         return () => ctx.revert();
     });
-
-    const boxRef = useRef();
+    
     useLayoutEffect(() => {
         gsap.to(".bounceImg", {x: (i) => 15 * i, repeat: -1, yoyo: true, duration: 1})
         gsap.to(".rtr", {x: (i) => -15 * i, repeat: -1, yoyo: true, duration: 1})
     })
     
     useLayoutEffect(() => {
+        gsap.to(".bounceImg2", {x: (i) => 20 * i, repeat: -1, yoyo: true, duration: 1})
+        gsap.to(".rtr2", {x: (i) => -20 * i, repeat: -1, yoyo: true, duration: 1})
+    })
+    
+    const boxRef = useRef();
+    const boxRef2 = useRef();
+
+    useLayoutEffect(() => {
         gsap.fromTo(boxRef.current, 
+            {rotation: 0},
+            {rotation: "+=3600", duration: 30, scrollTrigger: {trigger: boxRef.current}})
+
+        gsap.fromTo(boxRef2.current, 
             {rotation: 0},
             {rotation: "+=3600", duration: 30, scrollTrigger: {trigger: boxRef.current}})
     })
@@ -138,25 +150,21 @@ export const Projects = () => {
 
                 <div className="panel orange">
                     <Box className="projectBox">
-                        <Grid container justifyContent="center">
+                    <Grid container justifyContent="center">
+                            <div className='rtr2'></div>
                             <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                                 <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
-                                    <img src={reactImg} alt="reactImg" className="techImg" />
+                                    <img src={mongoImg} alt="mongoImg" className="techImg rtr2" />
                                 </Box>
                             </Grid>
                             <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                                 <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
-                                    <img src={nodeImg} alt="nodeImg" className="techImg" />
+                                    <img src={reactImg} alt="reactImg" ref={boxRef2} className="techImg bounceImg2" />
                                 </Box>
                             </Grid>
                             <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
                                 <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
-                                    <img src={muiImg} alt="muiImg" className="techImg" />
-                                </Box>
-                            </Grid>
-                            <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
-                                <Box className="techImgBox" display="grid" justifyItems="center" alignItems="center">
-                                    <img src={mongoImg} alt="mongoImg" className="techImg" />
+                                    <img src={muiImg} alt="muiImg" className="techImg bounceImg2" />
                                 </Box>
                             </Grid>
                         </Grid>
@@ -168,19 +176,19 @@ export const Projects = () => {
                                     </Typography>
                                     <Divider className="projectDivider" />
                                     <Typography variant='h5'>
-                                        Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing
+                                        Stuff About CO RB Rank Yippee
                                     </Typography>
                                     <Stack direction="row" spacing={5} display="flex" justifyContent="center">
-                                        <Button className='projectBtn' variant="contained" startIcon={<WebIcon />} href='https://externalsite-production.up.railway.app' target='_blank'>
+                                        <Button className='projectBtn' variant="contained" startIcon={<WebIcon />} href='https://corballrank-production.up.railway.app/' target='_blank'>
                                             LIVE SITE
                                         </Button>
-                                        <Button className='projectBtn' variant="contained" endIcon={<GitHubIcon />} href="https://github.com/Monarch-Metal/externalSite" target='_blank'>
+                                        <Button className='projectBtn' variant="contained" endIcon={<GitHubIcon />} href="https://github.com/EsotericZ/coRBallRank" target='_blank'>
                                             CODE
                                         </Button>
                                     </Stack>
                                 </Stack>
                             </Box>
-                            <img src={mmSite} alt="corballPic" className="projectImgRight imgHover" />
+                            <img src={coRBRank} alt="corballPic" className="projectImgRight imgHover" />
                         </div>
                     </Box>
                 </div>
