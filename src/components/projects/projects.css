@@ -60,7 +60,7 @@ body {
 }
 
 .projectContainer {
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     display: flex;
     justify-content: start;
@@ -73,19 +73,22 @@ body {
 
 .projectBoxLeft {
     background-color: grey;
-    height: 75%;
-    width: 75%;
-    border-radius: 25px;
+    height: 80%;
+    width: 90%;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 .projectBoxRight {
     background-color: grey;
-    height: 75%;
-    width: 75%;
+    height: 80%;
+    width: 80%;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -93,24 +96,27 @@ body {
     z-index: 10;
     position: absolute;
     right: 0;
+    bottom: 0;
 }
 
-.monarchPic {
+.projectImgLeft {
+    height: 90%;
+    width: 90%;
+    z-index: 0;
+    opacity: 0.8;
     position: absolute;
-    height: 100%;
-    width: auto;
     right: 0;
-    z-index: 0;
-    opacity: 0.8;
+    top: 0;
 }
 
-.corballPic {
-    position: absolute;
-    height: 100%;
-    width: auto;
-    left: 0;
+.projectImgRight {
+    height: 90%;
+    width: 90%;
     z-index: 0;
     opacity: 0.8;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .projectDivider {
@@ -126,4 +132,9 @@ h3, h5 {
 .projectBtn {
     width: 150px;
     height: 50px;
+}
+
+.imgHover:hover {
+    z-index: 10;
+    opacity: 0.9;
 }

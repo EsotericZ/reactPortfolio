@@ -128,7 +128,7 @@ export const Projects = () => {
                                     </Stack>
                                 </Stack>
                             </Box>
-                            <img src={mmSite} alt="monarchPic" className="monarchPic" />
+                            <img src={mmSite} alt="monarchPic" className="projectImgLeft imgHover" />
                         </div>
                     </Box>
                 </div>
@@ -180,7 +180,7 @@ export const Projects = () => {
                                     </Stack>
                                 </Stack>
                             </Box>
-                            <img src={mmSite} alt="corballPic" className="corballPic" />
+                            <img src={mmSite} alt="corballPic" className="projectImgRight imgHover" />
                         </div>
                     </Box>
                 </div>
@@ -228,7 +228,7 @@ export const Projects = () => {
                                     </Stack>
                                 </Stack>
                             </Box>
-                            <img src={mmSite} alt="monarchPic" className="monarchPic" />
+                            <img src={mmSite} alt="monarchPic" className="projectImgLeft imgHover" />
                         </div>
                     </Box>
                 </div>
