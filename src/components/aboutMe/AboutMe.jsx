@@ -32,22 +32,26 @@ export const AboutMe = () => {
                                 className={CURSOR_CLASS_NAME}
                                 sequence={[
                                     'React',
-                                    1000,
+                                    1500,
                                     'Node',
-                                    1000,
+                                    1500,
                                     'MongoDB',
-                                    1000,
+                                    1500,
                                     'JavaScript',
-                                    1000,
+                                    1500,
                                     'MySQL',
-                                    1000,
+                                    1500,
                                     'Python',
-                                    1000,
-                                    'Full Stack Web Developer',
-                                    (el) => el.classList.remove(CURSOR_CLASS_NAME)
+                                    1500,
+                                    'Full Stack Web ',
+                                    (el) => el.classList.remove(CURSOR_CLASS_NAME),
+                                    5000,
+                                    (el) => el.classList.add(CURSOR_CLASS_NAME),
+                                    ''
                                 ]}
                                 speed={50}
-                            />
+                                repeat={Infinity}
+                            />Developer
                         </Typography>
                         <Divider className="introDivider" />
                         <Typography variant='h4' className="introAboutMe">

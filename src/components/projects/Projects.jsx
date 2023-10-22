@@ -75,7 +75,20 @@ export const Projects = () => {
         <div ref={component} id="projects">
             <div ref={slider} className="container">
                 <div className="panel">
-                    PROJECTS
+                    <h1 class="jt --debug">
+                        <span class="jt__row">
+                            <span class="jt__text">PROJECTS</span>
+                        </span>
+                        <span class="jt__row jt__row--sibling" aria-hidden="true">
+                            <span class="jt__text">PROJECTS</span>
+                        </span>
+                        <span class="jt__row jt__row--sibling" aria-hidden="true">
+                            <span class="jt__text">PROJECTS</span>
+                        </span>
+                        <span class="jt__row jt__row--sibling" aria-hidden="true">
+                            <span class="jt__text">PROJECTS</span>
+                        </span>
+                    </h1>
                     <Fireworks
                         options={{
                             rocketsPoint: {
