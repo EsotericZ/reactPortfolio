@@ -2,7 +2,6 @@ import { useLayoutEffect, useRef } from "react";
 import { Fireworks } from "@fireworks-js/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import ParticleEffectButton from 'react-particle-effect-button';
 
 import mmSite from '../../assets/mmSite.png';
 import coRBRank from '../../assets/coRBRank.png';
@@ -20,15 +19,9 @@ import WebIcon from '@mui/icons-material/Web';
 
 import bootstrapImg from '../../assets/bootstrap.png';
 import cssImg from '../../assets/css.png';
-import gitImg from '../../assets/git.png';
-import graphqlImg from '../../assets/graphql.png';
-import htmlImg from '../../assets/html.png';
-import javascriptImg from '../../assets/javascript.png';
 import mongoImg from '../../assets/mongo.png';
 import muiImg from '../../assets/mui.png';
-import mysqlImg from '../../assets/mysql.png';
 import nodeImg from '../../assets/node.png';
-import pythonImg from '../../assets/python.png';
 import reactImg from '../../assets/react.png';
 
 gsap.registerPlugin(ScrollTrigger);
