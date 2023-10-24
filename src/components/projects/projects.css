@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 html {
     overflow-y: scroll;
     height: 100%;
@@ -140,16 +142,15 @@ h3, h5 {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 .jt {
-    color: tomato;
+    color: rgba(160, 32, 240);
     position: relative;
     font-size: 20vmin;
     font-family: 'Staatliches', sans-serif;
     text-transform: uppercase;
     font-display: swap;
-    text-shadow: 0 0 10px tomato;
+    text-shadow: 0 0 10px rgba(160, 32, 240);
 }
 
 .jt__row {
