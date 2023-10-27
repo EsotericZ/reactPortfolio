@@ -150,11 +150,7 @@ export const Projects = () => {
                         </div>
                     </Box>
                 </div>
-
-
-
-
-                <div className="panel orange">
+                <div className="panel purple">
                     <Box className="projectBox">
                     <Grid container justifyContent="center">
                             <div className='rtr2'></div>
@@ -182,7 +178,7 @@ export const Projects = () => {
                                     </Typography>
                                     <Divider className="projectDivider" />
                                     <Typography variant='h5'>
-                                        Stuff About CO RB Rank Yippee
+                                        React App built with 3 other students during my Full Stack Web course with Denver University. First full app built using React, was a fun and valuable learning experience.
                                     </Typography>
                                     <Stack direction="row" spacing={5} display="flex" justifyContent="center">
                                         <Button className='projectBtn' variant="contained" startIcon={<WebIcon />} href='https://corballrank-production.up.railway.app/' target='_blank'>
@@ -198,7 +194,7 @@ export const Projects = () => {
                         </div>
                     </Box>
                 </div>
-                <div className="panel purple">
+                {/* <div className="panel purple">
                     <Box className="projectBox">
                         <Grid container justifyContent="center">
                             <Grid item xs={4} sm={3} md={2} display="flex" justifyContent="center">
@@ -245,7 +241,7 @@ export const Projects = () => {
                             <img src={mmSite} alt="monarchPic" className="projectImgLeft imgHover" />
                         </div>
                     </Box>
-                </div>
+                </div> */}
             </div>
         </div>
     );
