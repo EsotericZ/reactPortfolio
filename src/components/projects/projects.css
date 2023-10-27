@@ -123,6 +123,8 @@ body {
 
 .projectDivider {
     width: 35%;
+    margin-left: 25px !important;
+    margin-right: 25px !important;
 }
 
 h3, h5 {
@@ -139,6 +141,14 @@ h3, h5 {
 .imgHover:hover {
     z-index: 10;
     opacity: 0.9;
+}
+
+.projectTitle {
+    padding: 0 25px;
+}
+
+.projectNotes {
+    padding: 0 25px;
 }
 
 

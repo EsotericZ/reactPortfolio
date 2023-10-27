@@ -129,12 +129,12 @@ export const Projects = () => {
                         <div className="projectContainer">
                             <Box className="projectBoxLeft">
                                 <Stack direction="column" spacing={2}>
-                                    <Typography variant='h3'>
+                                    <Typography variant='h3' className="projectTitle">
                                         Monarch Metal Manufacturing
                                     </Typography>
                                     <Divider className="projectDivider" />
-                                    <Typography variant='h5'>
-                                        Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing Monarch Metal Manufacturing
+                                    <Typography variant='h5' className="projectNotes">
+                                        External webiste for Monarch Metal Manufacturing, built using React, Bootstrap and CSS. Currently being used as the primary website for the manufactoring company.
                                     </Typography>
                                     <Stack direction="row" spacing={5} display="flex" justifyContent="center">
                                         <Button className='projectBtn' variant="contained" startIcon={<WebIcon />} href='https://externalsite-production.up.railway.app' target='_blank'>
@@ -173,11 +173,11 @@ export const Projects = () => {
                         <div className="projectContainer">
                             <Box className="projectBoxRight">
                                 <Stack direction="column" spacing={2}>
-                                    <Typography variant='h3'>
+                                    <Typography variant='h3' className="projectTitle">
                                         CO RBall Ranks
                                     </Typography>
                                     <Divider className="projectDivider" />
-                                    <Typography variant='h5'>
+                                    <Typography variant='h5' className="projectNotes">
                                         React App built with 3 other students during my Full Stack Web course with Denver University. First full app built using React, was a fun and valuable learning experience.
                                     </Typography>
                                     <Stack direction="row" spacing={5} display="flex" justifyContent="center">
