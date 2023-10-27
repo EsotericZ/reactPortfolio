@@ -1,7 +1,7 @@
 Update
-Finish project 3
-Projects css
-Contact me page
+Finish project 3 *remove for now
+Projects css *finish friday
+Contact me page *finish friday
 
 # React + Vite
 
